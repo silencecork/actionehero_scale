@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/
+hooks:
+  BeforeInstall:
+    - location: scripts/dep_install.sh
+    runas: ec2-user
+  AfterInstall:
+    - location: scripts/after_install.sh
+    runas: ec2-user
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      timeout: 3600
+      runas: ec2-user
+  ValidateService:
+    - location: scripts/validate_server.sh
+      timeout: 3600
+      runas: ec2-user
