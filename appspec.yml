@@ -3,6 +3,12 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/
+permissions:
+  - object: /home/ec2-user/scripts/after_install.sh
+    owner: ec2-user
+    mode: 777
+    type:
+      - file
 hooks:
   BeforeInstall:
     - location: scripts/dep_install.sh
