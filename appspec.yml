@@ -12,8 +12,6 @@ permissions:
 hooks:
   BeforeInstall:
     - location: scripts/dep_install.sh
-  Install:
-    - location: scripts/install.sh
   AfterInstall:
     - location: scripts/after_install.sh
   ApplicationStart:
