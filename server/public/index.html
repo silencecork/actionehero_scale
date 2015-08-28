@@ -112,8 +112,9 @@ Updtime (min):      <span class="right" id="uptime"></span>
         row += '<br />';
         html += row;
       }
-
-      html += (window.location.protocol + "//" + window.location.hostname);
+      var yip2=java.net.InetAddress.getLocalHost();
+      var yip=yip2.getHostAddress();
+      html += yip;
 
       document.getElementById('stats').innerHTML = html
     }
