@@ -23,7 +23,7 @@
             <a href="http://github.com/evantahler/actionhero">
                 <img src="/public/logo/actionhero.png" width="300" />
             </a>
-            <h2>Congratulations!YAYAYA</h2> 
+            <h2>Congratulations!</h2> 
             <h3>Your actionhero server is working.</h3>
           </div>
         </div>
@@ -59,10 +59,10 @@
           <div class="col-6 col-sm-6 col-lg-6">
             <h4>Server Information:</h4>
             <pre>
-ServerS Name:        <span class="right" id="serverName"></span>
-APIS Version:        <span class="right" id="serverVersion"></span>
-ActionheroS Version  <span class="right" id="actionheroVersion"></span>
-UpdtimeS (min):      <span class="right" id="uptime"></span>
+Server Name:        <span class="right" id="serverName"></span>
+API Version:        <span class="right" id="serverVersion"></span>
+Actionhero Version  <span class="right" id="actionheroVersion"></span>
+Updtime (min):      <span class="right" id="uptime"></span>
             </pre>
           </div>
 
@@ -112,6 +112,9 @@ UpdtimeS (min):      <span class="right" id="uptime"></span>
         row += '<br />';
         html += row;
       }
+
+      html += (window.location.protocol + "//" + window.location.hostname);
+
       document.getElementById('stats').innerHTML = html
     }
 
