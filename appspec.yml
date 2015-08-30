@@ -9,6 +9,11 @@ permissions:
     mode: 777
     type:
       - file
+  - object: /home/ec2-user/scripts/validate_server.sh
+    owner: ec2-user
+    mode: 777
+    type:
+      - file
 hooks:
   AfterInstall:
     - location: scripts/after_install.sh
