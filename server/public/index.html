@@ -57,7 +57,7 @@
           <h2>This Server</h2>
 
           <div class="col-6 col-sm-6 col-lg-6">
-            <h4>Server Information:</h4>
+            <h4>Server Information YAYAYA:</h4>
             <pre>
 Server Name:        <span class="right" id="serverName"></span>
 API Version:        <span class="right" id="serverVersion"></span>
@@ -112,9 +112,7 @@ Updtime (min):      <span class="right" id="uptime"></span>
         row += '<br />';
         html += row;
       }
-      var yip2=java.net.InetAddress.getLocalHost();
-      var yip=yip2.getHostAddress();
-      html += yip;
+      html += '<br>' + location.host + '</br>';
 
       document.getElementById('stats').innerHTML = html
     }
