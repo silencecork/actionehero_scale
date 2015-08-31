@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ec2-user/server
-forever list > validate_server.log
+forever list > /home/ec2-user/validate_server.log

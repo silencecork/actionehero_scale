@@ -9,11 +9,25 @@ permissions:
     mode: 777
     type:
       - file
+  - object: /home/ec2-user/scripts/validate_server.sh
+    owner: ec2-user
+    mode: 777
+    type:
+      - file
+  - object: /home/ec2-user/server
+    owner: ec2-user
+    mode: 777
+    type:
+      - directory
 hooks:
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 3600
   ApplicationStart:
     - location: scripts/application_start.sh
+      timeout: 3600
+      runas: ec2-user
+  ValidateService:
+    - location: scripts/validate_server.sh
       timeout: 3600
       runas: ec2-user
