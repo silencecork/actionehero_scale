@@ -21,12 +21,9 @@ permissions:
     type:
       - file
 hooks:
-  BeforeInstall:
-    - location: scripts/before_install.sh
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 3600
-      runas: ec2-user
   ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 3600
